@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <title>Barhorst Podium Techniek – Factuur Systeem</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <script type="module" src="script.js"></script>
+</head>
+<body>
+  <h1>Factuur Dashboard</h1>
+
+  <!-- Login -->
+  <div id="loginDiv">
+    <input type="email" id="email" placeholder="E-mail">
+    <input type="password" id="password" placeholder="Wachtwoord">
+    <button onclick="login()">Login</button>
+  </div>
+
+  <!-- Factuur Formulier -->
+  <div id="dashboard" style="display:none;">
+    <h2>Nieuwe Factuur</h2>
+    <input type="text" id="clientNaam" placeholder="Klant Naam">
+    <input type="email" id="clientEmail" placeholder="Klant E-mail">
+    <input type="text" id="factuurNummer" placeholder="Factuur Nummer">
+    <input type="number" id="totaalBedrag" placeholder="Totaal Bedrag">
+    <button onclick="createInvoice()">Factuur Aanmaken & Versturen</button>
+
+    <h3>Facturen Overzicht</h3>
+    <ul id="invoiceList"></ul>
+  </div>
+</body>
+</html>
